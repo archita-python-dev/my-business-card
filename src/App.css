@@ -1,0 +1,184 @@
+.page {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 100svh;
+  overflow: hidden; /* no page scrolling */
+}
+
+/* --- Card --- */
+.card {
+  width: 100%;
+  max-width: 340px;
+  height: 100svh; /* fill the full screen height */
+  display: flex;
+  flex-direction: column;
+  background: #22232b;
+  border: 5px solid #fff; /* thick white border around the card */
+  border-radius: 24px; /* rounded corners */
+  overflow: hidden;
+  color: #d5d8dc;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+}
+
+/* --- Photo --- */
+.photo {
+  width: 100%;
+  flex: 1 1 auto; /* shrinks so the card fits the screen without scrolling */
+  min-height: 90px;
+  background: #2b2d36;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Body --- */
+.body {
+  flex: 0 0 auto;
+  padding: 22px 30px 8px;
+  text-align: center;
+}
+
+.name {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.role {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #5093e2; /* LinkedIn blue */
+}
+
+.website {
+  margin: 10px 0 0;
+  font-size: 11px;
+  color: #cbd0d6;
+}
+
+/* --- Buttons --- */
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 22px 0 4px;
+}
+
+.btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 34px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(0.92);
+}
+
+.btn-email {
+  background: #fff;
+  color: #3a3a3a;
+}
+
+.btn-linkedin {
+  background: #5093e2;
+  color: #fff;
+}
+
+/* --- Sections --- */
+.body .section {
+  text-align: left;
+  margin-top: 22px;
+}
+
+.section h2 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.section p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #a4a9b0;
+}
+
+/* --- Social footer --- */
+.social {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 0;
+  margin-top: 16px;
+  background: #16171d;
+}
+
+/* Light-grey rounded-square tiles with the glyph knocked out in dark */
+.social a {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #9a9ba6; /* tile colour */
+  color: #16171d; /* dark glyph (matches footer background) */
+  transition: background 0.15s ease;
+}
+
+.social a svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* On hover: white tile + each icon in its true brand colour */
+.social a:hover {
+  background: #fff;
+}
+
+.social a[aria-label='Twitter']:hover {
+  color: #1da1f2;
+}
+
+/* LeetCode: dark glyph like the others by default; true favicon colours only on hover */
+.social a[aria-label='LeetCode']:not(:hover) svg path {
+  fill: #16171d;
+}
+
+.social a[aria-label='Facebook']:hover {
+  color: #1877f2; /* blue "f" on the white tile */
+}
+
+/* Instagram's real logo is a multi-colour gradient */
+.social a[aria-label='Instagram']:hover svg rect,
+.social a[aria-label='Instagram']:hover svg circle {
+  stroke: url(#ig-gradient);
+}
+
+.social a[aria-label='Instagram']:hover svg circle:last-of-type {
+  fill: url(#ig-gradient);
+}
+
+.social a[aria-label='GitHub']:hover {
+  color: #181717; /* dark logo on the white tile */
+}

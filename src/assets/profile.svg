@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="320" viewBox="0 0 400 320">
+  <rect width="400" height="320" fill="#2b2d36"/>
+  <circle cx="200" cy="130" r="55" fill="#3a3d47"/>
+  <path d="M110 300c0-50 40-85 90-85s90 35 90 85z" fill="#3a3d47"/>
+  <text x="200" y="305" fill="#6b6e78" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">Add your photo → src/assets/</text>
+</svg>
