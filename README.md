@@ -4,7 +4,7 @@ A personal business card built with React
 
 ## Tech Stack
 
-| | |
+| Domain | Technology |
 |---|---|
 | UI | React 19 (`react`, `react-dom`) |
 | Build tool | Vite 8 with `@vitejs/plugin-react` |
